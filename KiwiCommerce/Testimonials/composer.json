@@ -1,0 +1,20 @@
+{
+    "name": "KiwiCommerce/Testimonials",
+    "description": "KiwiCommerce Testimonials",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "require": {
+        "php": "~8.0.0|~8.1.0|~8.1.2"
+    },
+    "license": [
+      "MIT"
+    ],
+    "autoload": {
+      "psr-4": {
+        "KiwiCommerce\\Testimonials\\": ""
+      },
+      "files": [
+        "registration.php"
+      ]
+    }
+  }

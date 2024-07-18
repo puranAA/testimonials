@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="kiwi_commerce_testimonials" resource="default" engine="innodb" comment="KiwiCommerce Testimonials">
+        <column xsi:type="int" name="testimonial_id" padding="10" unsigned="true" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="varchar" name="company_name" length="100" nullable="false" comment="Company Name" />
+        <column xsi:type="varchar" name="manufacturer_name" length="100" nullable="false" comment="Manufacturer Name" />
+        <column xsi:type="text" name="message" nullable="true" comment="Message"/>
+        <column xsi:type="varchar" name="post" length="100" nullable="false" comment="Post" />
+        <column xsi:type="varchar" name="profile_pic" length="100" nullable="false" comment="Profile Pic" />
+        <column xsi:type="int" name="status" padding="10" nullable="false" comment="Status" />
+        <column xsi:type="timestamp" name="created_at" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
+        <column xsi:type="timestamp" name="updated_at" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated At"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="testimonial_id"/>
+        </constraint>
+    </table>
+</schema>

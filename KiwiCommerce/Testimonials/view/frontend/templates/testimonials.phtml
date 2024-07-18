@@ -1,0 +1,31 @@
+<?php 
+$data   = $block->getTestimonials();
+$path   = $block->getMediaPath();
+$config = $block->getConfig('testimonials/general/status');
+if($config && $data->getSize())
+{
+?>
+<div class="slick-slider aaaa">
+<?php
+foreach ($data as $key => $testimonial) {
+?>
+<div class="item"><?php echo $testimonial['manufacturer_name']; ?><img src="<?php echo $path.$testimonial['profile_pic']; ?>" width="200px;" /></div>
+<?php
+}
+?>
+</div>
+
+<script>
+require(['jquery', 'jquery/ui', 'slick'], function($){
+    $(document).ready(function() {
+        $('.slick-slider').slick({
+            dots: true,
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            autoplay: true
+        });
+    });
+});
+</script>
+<?php } ?>
